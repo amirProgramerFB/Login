@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% include "links.html" %}
+</head>
+<body>
+
+
+<div class="container" dir="rtl" style="text-align:right">
+  <h2 style="text-align:center">ACHATA</h2>
+  <form action="{{ action }}" method="post" dir="rtl" style="text-align:right">
+      {% csrf_token %}
+      {% for fields in form %}
+    <div class="form-group">
+                {{ fields.label_tag }}
+    {{ fields }}
+
+    </div>
+      {% endfor %}
+
+    <button type="submit" class="btn btn-primary">ثبت نام</button>
+  </form>
+</div>
+
+
+
+
+
+
+</body>
+</html>

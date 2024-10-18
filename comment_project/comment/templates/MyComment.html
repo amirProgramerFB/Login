@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+      {% include "links.html" %}
+
+</head>
+<body>
+<div class="container" dir="rtl">
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>نام کامل</th>
+        <th>ایمیل</th>
+        <th>پیام</th>
+        <th>اعمال</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for item in MyCommentList %}
+      <tr>
+        <td>{{item.Fullname}}</td>
+        <td>{{ item.Email }}</td>
+        <td>{{ item.message }}</td>
+        <td><a href="/EditCotaxt/{{ item.Id }}">ویرایش</a></td>
+        <td><a href="/DeleteCotaxt/{{ item.Id }}" class="btn btn-danger">حذف</a></td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+
+
+
+
+</body>
+</html>

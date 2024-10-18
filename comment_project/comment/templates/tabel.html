@@ -1,0 +1,25 @@
+ {% include "links.html" %}
+<table class="table table-hover bg-black " dir="rtl">
+
+     <thead>
+     <tr>
+         <th>نام</th>
+         <th>نام خانوادگی</th>
+         <th>سن</th>
+
+     </tr>
+
+     </thead>
+
+     <tbody>
+        {% for item in model %}
+        <tr>
+            <td>{{item.name}}</td>
+            <td>{{item.family}}</td>
+            <td>{{item.age}}</td>
+        </tr>
+        {% endfor %}
+
+     </tbody>
+
+ </table>
